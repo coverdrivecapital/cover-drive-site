@@ -65,29 +65,11 @@
       margin-top: 0.06em;                   /* tight lock under line1 */
     }
 
-    /* Invisible full-page interactive layer (no URL in status bar) */
+    /* Invisible full-page interactive layer (no URL in status bar, nothing visible) */
     #cover-link {
       position: fixed; inset: 0;
       z-index: 2;
       cursor: pointer;
       outline: none;
     }
-    #cover-link:focus-visible { outline: 2px solid #888; outline-offset: 6px; }
-  </style>
-</head>
-<body>
-  <!-- Click anywhere (or press Enter/Space) to email — address is assembled at click time -->
-  <div id="cover-link" role="link" tabindex="0" aria-label="Email Cover Drive Partners"></div>
-
-  <main class="wrap" role="main" aria-label="Cover Drive Partners homepage">
-    <h1 class="title-group" aria-label="Cover Drive Partners">
-      <span class="line1">COVER DRIVE</span>
-      <span class="line2">PARTNERS</span>
-    </h1>
-  </main>
-
-  <script>
-    // Email obfuscated as character codes (gvaddi@coverdrivecapital.com)
-    // To change the address later, update the numbers below to your email's char codes.
-    (function () {
-      const cod
+    #cover-link:focus-visible { ou
