@@ -65,22 +65,29 @@
       margin-top: 0.06em;                   /* tight lock under line1 */
     }
 
-    /* Click-anywhere mailto overlay (accessible) */
-    a.cover-link {
+    /* Invisible full-page interactive layer (no URL in status bar) */
+    #cover-link {
       position: fixed; inset: 0;
-      text-indent: -9999px;
-      color: transparent;
       z-index: 2;
+      cursor: pointer;
+      outline: none;
     }
-    a.cover-link:focus-visible { outline: 2px solid #888; outline-offset: 6px; }
+    #cover-link:focus-visible { outline: 2px solid #888; outline-offset: 6px; }
   </style>
 </head>
 <body>
-  <!-- Click anywhere to email (change to your preferred address) -->
-  <a class="cover-link" href="mailto:gvaddi@coverdrive.com" aria-label="Email Cover Drive Partners">Email Cover Drive Partners</a>
+  <!-- Click anywhere (or press Enter/Space) to email — address is assembled at click time -->
+  <div id="cover-link" role="link" tabindex="0" aria-label="Email Cover Drive Partners"></div>
 
   <main class="wrap" role="main" aria-label="Cover Drive Partners homepage">
     <h1 class="title-group" aria-label="Cover Drive Partners">
       <span class="line1">COVER DRIVE</span>
       <span class="line2">PARTNERS</span>
     </h1>
+  </main>
+
+  <script>
+    // Email obfuscated as character codes (gvaddi@coverdrivecapital.com)
+    // To change the address later, update the numbers below to your email's char codes.
+    (function () {
+      const cod
