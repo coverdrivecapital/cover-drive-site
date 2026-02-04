@@ -39,6 +39,8 @@
       justify-content: center;
       text-align: center;
       padding: 0;
+      position: relative;
+      z-index: 1;
     }
 
     /* Two-line lockup */
@@ -64,9 +66,117 @@
       font-size: clamp(18px, 2.8vw, 36px);
       margin-top: 0.06em;                   /* tight lock under line1 */
     }
+
+    .logo-grid {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      gap: clamp(12px, 3vw, 28px);
+      padding: clamp(24px, 6vw, 64px);
+      opacity: 0.12;
+      filter: grayscale(100%);
+      pointer-events: none;
+      z-index: 0;
+      align-items: center;
+      justify-items: center;
+    }
+
+    .logo-cell {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(14, 59, 46, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12%;
+      box-shadow: 0 6px 18px rgba(14, 59, 46, 0.04);
+    }
+
+    .logo-cell img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
   </style>
 </head>
 <body>
+  <section class="logo-grid" aria-hidden="true">
+    <div class="logo-cell">
+      <img src="https://logo.clearbit.com/logicmonitor.com" alt="LogicMonitor logo" loading="lazy" />
+    </div>
+    <div class="logo-cell">
+      <img src="https://logo.clearbit.com/anjusoftware.com" alt="Anju Software logo" loading="lazy" />
+    </div>
+    <div class="logo-cell">
+      <img src="https://logo.clearbit.com/arcoro.com" alt="Arcoro logo" loading="lazy" />
+    </div>
+    <div class="logo-cell">
+      <img src="https://logo.clearbit.com/opuscapita.com" alt="OpusCapita logo" loading="lazy" />
+    </div>
+    <div class="logo-cell">
+      <img src="https://logo.clearbit.com/talend.com" alt="Talend logo" loading="lazy" />
+    </div>
+    <div class="logo-cell">
+      <img src="https://logo.clearbit.com/untangle.com" alt="Untangle logo" loading="lazy" />
+    </div>
+    <div class="logo-cell">
+      <img src="https://logo.clearbit.com/redis.com" alt="Redis logo" loading="lazy" />
+    </div>
+    <div class="logo-cell">
+      <img src="https://logo.clearbit.com/aidoc.com" alt="AiDoc logo" loading="lazy" />
+    </div>
+    <div class="logo-cell">
+      <img src="https://logo.clearbit.com/darwinbox.com" alt="Darwinbox logo" loading="lazy" />
+    </div>
+    <div class="logo-cell">
+      <img src="https://logo.clearbit.com/threatconnect.com" alt="ThreatConnect logo" loading="lazy" />
+    </div>
+    <div class="logo-cell">
+      <img src="https://logo.clearbit.com/conversica.com" alt="Conversica logo" loading="lazy" />
+    </div>
+    <div class="logo-cell">
+      <img src="https://logo.clearbit.com/leapevent.tech" alt="Leap Event Tech logo" loading="lazy" />
+    </div>
+    <div class="logo-cell">
+      <img src="https://logo.clearbit.com/chatmeter.com" alt="Chatmeter logo" loading="lazy" />
+    </div>
+    <div class="logo-cell">
+      <img src="https://logo.clearbit.com/spryker.com" alt="Spryker logo" loading="lazy" />
+    </div>
+    <div class="logo-cell">
+      <img src="https://logo.clearbit.com/fareye.com" alt="FarEye logo" loading="lazy" />
+    </div>
+    <div class="logo-cell">
+      <img src="https://logo.clearbit.com/devo.com" alt="Devo logo" loading="lazy" />
+    </div>
+    <div class="logo-cell">
+      <img src="https://logo.clearbit.com/nasuni.com" alt="Nasuni logo" loading="lazy" />
+    </div>
+    <div class="logo-cell">
+      <img src="https://logo.clearbit.com/aviatrix.com" alt="Aviatrix logo" loading="lazy" />
+    </div>
+    <div class="logo-cell">
+      <img src="https://logo.clearbit.com/onetrust.com" alt="OneTrust logo" loading="lazy" />
+    </div>
+    <div class="logo-cell">
+      <img src="https://logo.clearbit.com/vectra.ai" alt="Vectra logo" loading="lazy" />
+    </div>
+    <div class="logo-cell">
+      <img src="https://logo.clearbit.com/hashicorp.com" alt="HashiCorp logo" loading="lazy" />
+    </div>
+    <div class="logo-cell">
+      <img src="https://logo.clearbit.com/venafi.com" alt="Venafi logo" loading="lazy" />
+    </div>
+    <div class="logo-cell">
+      <img src="https://logo.clearbit.com/silver-peak.com" alt="Silver Peak logo" loading="lazy" />
+    </div>
+    <div class="logo-cell">
+      <img src="https://logo.clearbit.com/cradlepoint.com" alt="Cradlepoint logo" loading="lazy" />
+    </div>
+  </section>
   <main class="wrap" role="main" aria-label="Cover Drive Partners homepage">
     <h1 class="title-group" aria-label="Cover Drive Partners">
       <span class="line1">COVER DRIVE</span>
